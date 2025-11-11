@@ -112,23 +112,23 @@ const Index = () => {
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.poehali.dev/projects/82e7ab39-23a3-45e0-b0e5-9469e9720ad2/files/2ae6cdcd-d820-41c3-aea4-6664701c15df.jpg')`
         }}
       >
-        <div className="container mx-auto px-4 py-20 text-center text-white relative z-10">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
+        <div className="container mx-auto px-4 py-12 md:py-20 text-center text-white relative z-10">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 md:mb-6 animate-fade-in-up">
             ДеревьЯ
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 max-w-3xl mx-auto animate-fade-in px-4" style={{ animationDelay: '0.2s' }}>
             Покупай саженцы — сажай лес.<br />Лес, в который можно вернуться.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            <Button size="lg" className="text-lg px-8 bg-primary hover:bg-primary/90">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 justify-center animate-fade-in px-4" style={{ animationDelay: '0.4s' }}>
+            <Button size="lg" className="text-base md:text-lg px-6 md:px-8 bg-primary hover:bg-primary/90 w-full sm:w-auto">
               <Icon name="MapPin" className="mr-2" size={20} />
               Выбрать город и посадку
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 hover:bg-white/20 text-white border-white">
+            <Button size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-8 bg-white/10 hover:bg-white/20 text-white border-white w-full sm:w-auto">
               <Icon name="Building2" className="mr-2" size={20} />
               Для компаний
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 hover:bg-white/20 text-white border-white">
+            <Button size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-8 bg-white/10 hover:bg-white/20 text-white border-white w-full sm:w-auto">
               <Icon name="Shield" className="mr-2" size={20} />
               Роща славы
             </Button>
@@ -136,9 +136,9 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Выберите формат участия</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-16">Выберите формат участия</h2>
           
           <Card className="max-w-2xl mx-auto mb-12 shadow-lg">
             <CardHeader>
@@ -206,31 +206,31 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Три истории. Одна земля.</h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4">Три истории. Одна земля.</h2>
+          <p className="text-lg md:text-xl text-center text-muted-foreground mb-8 md:mb-16 max-w-3xl mx-auto px-4">
             Лес не лайкают. Его сажают руками.
           </p>
 
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-12">
             {emotionalBlocks.map((block, index) => (
               <Card 
                 key={index} 
                 className={`${block.bgColor} border-none shadow-lg overflow-hidden animate-fade-in hover:shadow-xl transition-shadow`}
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <CardContent className="p-8 md:p-12">
-                  <div className="flex items-start gap-6 mb-6">
-                    <div className="bg-primary text-primary-foreground p-4 rounded-full shrink-0">
-                      <Icon name={block.icon as any} size={32} />
+                <CardContent className="p-6 md:p-8 lg:p-12">
+                  <div className="flex flex-col sm:flex-row items-start gap-4 md:gap-6 mb-6">
+                    <div className="bg-primary text-primary-foreground p-3 md:p-4 rounded-full shrink-0">
+                      <Icon name={block.icon as any} size={28} className="sm:w-8 sm:h-8" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl md:text-3xl font-bold mb-4">{block.title}</h3>
-                      <p className="text-lg mb-4 leading-relaxed">{block.text}</p>
-                      <p className="text-base text-muted-foreground mb-6 leading-relaxed">{block.subtext}</p>
-                      <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-                        <Button size="lg" className="text-base">
+                      <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4">{block.title}</h3>
+                      <p className="text-base md:text-lg mb-3 md:mb-4 leading-relaxed">{block.text}</p>
+                      <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6 leading-relaxed">{block.subtext}</p>
+                      <div className="flex flex-col sm:flex-row gap-3 md:gap-4 items-start sm:items-center">
+                        <Button size="lg" className="text-sm md:text-base w-full sm:w-auto">
                           {block.buttonText}
                         </Button>
                         <span className="text-sm font-semibold text-primary">{block.price}</span>
@@ -244,10 +244,10 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-12 md:py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Для компаний</h2>
-          <p className="text-xl text-center mb-16 opacity-90 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4">Для компаний</h2>
+          <p className="text-lg md:text-xl text-center mb-8 md:mb-16 opacity-90 max-w-3xl mx-auto px-4">
             Шефство над лесом — это не просто посадка. Это ваша корпоративная культура, ваша репутация, ваш вклад.
           </p>
 
@@ -282,14 +282,14 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-destructive/5">
+      <section className="py-12 md:py-20 bg-destructive/5">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Цифры, которые молчать нельзя</h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4 px-4">Цифры, которые молчать нельзя</h2>
+          <p className="text-lg md:text-xl text-center text-muted-foreground mb-8 md:mb-16 max-w-3xl mx-auto px-4">
             Пока мы лайкаем посты про экологию, лес исчезает. Вот реальная статистика по России.
           </p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {stats.map((stat, index) => (
               <Card 
                 key={index}
@@ -297,18 +297,18 @@ const Index = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="pt-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                    <Icon name={stat.icon as any} className="text-primary" size={32} />
+                  <div className="inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-primary/10 mb-3 md:mb-4">
+                    <Icon name={stat.icon as any} className="text-primary" size={28} />
                   </div>
-                  <div className="text-3xl md:text-4xl font-bold mb-2 text-primary">{stat.value}</div>
-                  <p className="text-sm text-muted-foreground">{stat.label}</p>
+                  <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 text-primary">{stat.value}</div>
+                  <p className="text-xs md:text-sm text-muted-foreground">{stat.label}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <div className="mt-12 max-w-3xl mx-auto bg-card p-8 rounded-lg shadow-md">
-            <p className="text-lg leading-relaxed text-center">
+          <div className="mt-8 md:mt-12 max-w-3xl mx-auto bg-card p-6 md:p-8 rounded-lg shadow-md">
+            <p className="text-base md:text-lg leading-relaxed text-center">
               Каждый год Россия теряет больше 19 миллионов гектаров леса. Восстанавливается — меньше миллиона. 
               <span className="font-bold text-primary"> Мы не можем остановить вырубку, но можем создать новый лес</span> — 
               дерево за деревом, гектар за гектаром.
@@ -317,11 +317,11 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Истории посадок</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-16">Истории посадок</h2>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
             {stories.map((story, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow animate-scale-in">
                 <div className="aspect-video relative overflow-hidden">
@@ -352,32 +352,32 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Как это работает</h2>
-          <p className="text-xl text-center text-muted-foreground mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4">Как это работает</h2>
+          <p className="text-lg md:text-xl text-center text-muted-foreground mb-8 md:mb-16 px-4">
             От идеи до дерева — 5 простых шагов
           </p>
 
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
+            <div className="space-y-4 md:space-y-8">
               {steps.map((step, index) => (
                 <div 
                   key={index}
-                  className="flex items-start gap-6 p-6 bg-card rounded-lg shadow-md hover:shadow-lg transition-shadow animate-fade-in"
+                  className="flex items-start gap-4 md:gap-6 p-4 md:p-6 bg-card rounded-lg shadow-md hover:shadow-lg transition-shadow animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold">
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-lg md:text-xl font-bold">
                       {index + 1}
                     </div>
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <Icon name={step.icon as any} className="text-primary" size={24} />
-                      <h3 className="text-xl font-semibold">{step.title}</h3>
+                    <div className="flex items-center gap-2 md:gap-3 mb-2">
+                      <Icon name={step.icon as any} className="text-primary" size={20} />
+                      <h3 className="text-lg md:text-xl font-semibold">{step.title}</h3>
                     </div>
-                    <p className="text-muted-foreground">{step.description}</p>
+                    <p className="text-sm md:text-base text-muted-foreground">{step.description}</p>
                   </div>
                 </div>
               ))}
@@ -386,15 +386,15 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-secondary text-secondary-foreground">
+      <section className="py-12 md:py-20 bg-secondary text-secondary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Доверие и гарантии</h2>
-          <p className="text-lg mb-12 opacity-90 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Доверие и гарантии</h2>
+          <p className="text-base md:text-lg mb-8 md:mb-12 opacity-90 max-w-2xl mx-auto px-4">
             Мы работаем с лесхозами, экологическими организациями и местными администрациями. 
             Каждое дерево учитывается, каждый участок — под контролем.
           </p>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
             <Card className="bg-white/10 border-white/20">
               <CardContent className="pt-6 text-center">
                 <Icon name="FileCheck" className="mx-auto mb-4" size={48} />
@@ -425,9 +425,9 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-12 bg-primary text-primary-foreground">
+      <footer className="py-8 md:py-12 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
             <div>
               <h3 className="text-2xl font-bold mb-4">ДеревьЯ</h3>
               <p className="opacity-80">Покупай саженцы — сажай лес</p>
